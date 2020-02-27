@@ -1,6 +1,6 @@
 {
   "name": "@nodexe/mysql",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A package to connect with mysql",
   "main": "index.js",
   "scripts": {
