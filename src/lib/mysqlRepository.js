@@ -1,4 +1,4 @@
-const {MysqlService} = require('../../index');
+const MysqlService = require('./MysqlService');
 
 const createClient = (options) => new MysqlService(options);
 
