@@ -1,4 +1,4 @@
-# glib
+# @nodexe/mysql
 
 ## Table of Contents
 
@@ -7,7 +7,7 @@
 
 ## Introduction
 
-This is a powerful library with common & utils functions developed to improve your projects. All of them had been tested and used in different projects avoiding the effort to implement in your project.
+This is a library to connect to mysql. All of them had been tested and used in different projects avoiding the effort to implement in your project.
 
 ## Install
 
@@ -20,9 +20,9 @@ Installation is done using the
 `npm install command`:
 
 ```sh
-$ npm install @eportela/glib
+$ npm install @nodexe/mysql
 ```
 
 ## License
 
-glib is freely distributable under the terms of the [MIT license](LICENSE).
+@nodexe/mysql is freely distributable under the terms of the [MIT license](LICENSE).
