@@ -6,19 +6,18 @@ class MysqlService {
     this.instance = createConnection(connection);
   }
 
-  async executeQuery(sql, params = []) {
+  async executeQuery(sql, params = [], options = {timeout: 10000}) {
     const query = await promisify(this.instance.query.bind(this.instance));
-    return query(sql, params);
+    return query({sql, ...options}, params);
   }
 
-  executeProcedure(name, params = []) {
+  executeProcedure(name, params = [], options = {timeout: 10000}) {
     const procedure = `call ${name}(${params.map(() => '?').join(',')})`;
-    return this.executeQuery(procedure, params);
+    return this.executeQuery(procedure, params, options);
   }
 
   async close() {
-    const end = await promisify(this.instance.end.bind(this.instance));
-    return end();
+    return this.instance.destroy();
   }
 }
 
